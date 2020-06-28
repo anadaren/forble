@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<!--Click-based Danmaku game co-written by Claire O. and Anastasia G. written in 2016. Best played in full screen or on mobile.-->
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FORBLE - a Point-and-Click Danmaku</title>
+<meta name="description" content="Forble, a JavaScript click based game by Claire O. and Anastasia G.">
+<meta name="keywords" content="forble, bullet hell, danmaku, game">
+<meta name="author" content="Claire O. and Anastasia G.">
+
+<link rel="shortcut icon" href="forble.png">
+<link rel="stylesheet" href="forblecss.css">
+
+<script language="Javascript">
+//sets a keyboard shortcut for ctrl as a pause button
+	shortcut.add("Ctrl", function()
+	{
+		if(myGameArea.stage!=0)
+		{	
+			//if game is unpaused, pause it
+			if(myGameArea.paused==0)
+			{
+				myGameArea.paused=1;
+				//FIXME
+				//clearInterval(myGameArea.interval);
+			}
+			//if game is paused, unpause it
+			else
+			{
+				myGameArea.paused=0;
+				//FIXME		
+				//myGameArea.interval = setInterval(updateGameArea, 20);
+			}
+		}
+	}
+	);
+</script>
+  
+</head>
+
+
+<body onload="myGameArea.start()">
+  
+<script src="forblejs.js"></script>
+  
+</body>
+</html>
+
